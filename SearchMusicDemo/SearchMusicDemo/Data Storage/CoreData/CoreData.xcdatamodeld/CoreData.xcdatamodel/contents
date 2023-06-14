@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MVCProduct" representedClassName="MVCProduct" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="collectionName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackViewURL" optional="YES" attributeType="String"/>
+        <relationship name="viewsCount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVCViewsNumber" inverseName="owner" inverseEntity="MVCViewsNumber"/>
+    </entity>
+    <entity name="MVCViewsNumber" representedClassName="MVCViewsNumber" syncable="YES">
+        <attribute name="views" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVCProduct" inverseName="viewsCount" inverseEntity="MVCProduct"/>
+    </entity>
+    <entity name="MVPProduct" representedClassName="MVPProduct" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="collectionName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackViewURL" optional="YES" attributeType="String"/>
+        <relationship name="viewsCount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVPViewsNumber" inverseName="owner" inverseEntity="MVPViewsNumber"/>
+    </entity>
+    <entity name="MVPViewsNumber" representedClassName="MVPViewsNumber" syncable="YES">
+        <attribute name="views" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVPProduct" inverseName="viewsCount" inverseEntity="MVPProduct"/>
+    </entity>
+    <entity name="MVVMProduct" representedClassName="MVVMProduct" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="collectionName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackViewURL" optional="YES" attributeType="String"/>
+        <relationship name="viewsCount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVVMViewsNumber" inverseName="owner" inverseEntity="MVVMViewsNumber"/>
+    </entity>
+    <entity name="MVVMViewsNumber" representedClassName="MVVMViewsNumber" syncable="YES">
+        <attribute name="views" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MVVMProduct" inverseName="viewsCount" inverseEntity="MVVMProduct"/>
+    </entity>
+    <entity name="VIPERProduct" representedClassName="VIPERProduct" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="collectionName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackViewURL" optional="YES" attributeType="String"/>
+        <relationship name="viewsCount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VIPERViewsNumber" inverseName="owner" inverseEntity="VIPERViewsNumber"/>
+    </entity>
+    <entity name="VIPERViewsNumber" representedClassName="VIPERViewsNumber" syncable="YES">
+        <attribute name="views" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VIPERProduct" inverseName="viewsCount" inverseEntity="VIPERProduct"/>
+    </entity>
+</model>
